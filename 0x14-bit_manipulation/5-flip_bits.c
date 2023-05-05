@@ -8,10 +8,12 @@ void print_binary(unsigned long int n)
 {
 	int i;
 	int count = 0;
+	unsigned long int current;
+	unsigned long int another = n ^ m;
 
 	for (i = 63; i >= 0; i--)
 	{
-		unsigned long int current = n >> i;
+		current = another >> i;
 
 		if (current & 1)
 		{
